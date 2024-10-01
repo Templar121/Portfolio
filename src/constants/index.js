@@ -175,7 +175,7 @@ import {
       icon: iitkgp,
       iconBg: "#E6DEDD",
       date: "Oct 2024",
-      link: "",
+      link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS81S33130000602761845",
       points: [
         "8 Weeks course taught by Dr. Sudeshna Sarkar, Head - Centre of Excellence in Artificial Intelligence",
         "Skills learned - Various Mchine Learning Algorithms and their use cases."
