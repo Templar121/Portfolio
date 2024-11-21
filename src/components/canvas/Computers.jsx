@@ -1,12 +1,13 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState, memo } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import  CanvasLoader  from '../Loader';
 
 
-const Computers = ( { isMobile }) => {
 
-  const computer = useGLTF("./desktop_pc/scene_optimized.glb");
+const Computers = memo (( { isMobile }) => {
+
+  const computer = useGLTF("./desktop_pc/scene_optimized.glb", true);
 
   
 
@@ -20,7 +21,7 @@ const Computers = ( { isMobile }) => {
         penumbra={1}
         intensity={10}
         castShadow
-        shadow-mapSize={1024}
+        shadow-mapSize={512}
       />
       <primitive
         object = {computer.scene}
@@ -30,7 +31,7 @@ const Computers = ( { isMobile }) => {
       />
     </mesh>
   )
-}
+});
 
 const ComputersCanvas = () => {
 
@@ -44,7 +45,17 @@ const ComputersCanvas = () => {
       setIsMobile(event.matches);
     }
 
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
+    const debounce = (func, delay) => {
+      let timer;
+      return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => func(...args), delay);
+      };
+    };
+    
+    const debouncedHandleMediaQueryChange = debounce(handleMediaQueryChange, 200);
+    mediaQuery.addEventListener('change', debouncedHandleMediaQueryChange);
+    
 
     return () => {
       mediaQuery.removeEventListener('change', handleMediaQueryChange);
