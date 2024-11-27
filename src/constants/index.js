@@ -27,6 +27,7 @@ import {
     hu,
     iitkgp,
     su,
+    iitm,
   } from "../assets";
   
   export const navLinks = [
@@ -37,6 +38,10 @@ import {
     {
       id: "work",
       title: "Achivements",
+    },
+    {
+      id: "Certificates",
+      title: "Certificates",
     },
     {
       id: "contact",
@@ -170,8 +175,20 @@ import {
 
   const certificates = [
     {
+      title: "Deep Learning",
+      issuing_organization: "Indian Instititute of Technology, Madras, NPTEL",
+      icon: iitm,
+      iconBg: "#E6DEDD",
+      date: "Nov 2024",
+      link: "https://nptel.ac.in/noc/E_Certificate/NPTEL24CS114S86980006904337487",
+      points: [
+              "12 Weeks course taugh by Mitesh Khapra - Topper 5 % in this course",
+              "skills learned - Machine Learning, Neural Network, CNN, Python."
+      ],
+    },
+    {
       title: "Introduction to Machine Learning",
-      issuing_organization: "Indian Institute of technology, Kharagpur, NPTEL",
+      issuing_organization: "Indian Institute of Technology, Kharagpur, NPTEL",
       icon: iitkgp,
       iconBg: "#E6DEDD",
       date: "Oct 2024",
