@@ -34,6 +34,7 @@ import hu from "./cert/hu.png";
 import dlai from "./cert/dlai.png";
 import su from "./cert/su.png";
 import iitkgp from "./cert/iitkgp.png";
+import iitm from "./cert/iitm.png";
 
 
 
@@ -71,4 +72,5 @@ export {
   tf,
   sklearn,
   sih,
+  iitm,
 };
