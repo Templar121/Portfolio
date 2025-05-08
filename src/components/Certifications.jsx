@@ -76,4 +76,4 @@ const Certifications = () => {
   )
 }
 
-export default SectionWrapper(Certifications, "")
+export default SectionWrapper(Certifications, "Certifications")

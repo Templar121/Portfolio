@@ -40,8 +40,8 @@ import {
       title: "Achivements",
     },
     {
-      id: "Certificates",
-      title: "Certificates",
+      id: "Certifications",
+      title: "Certifications",
     },
     {
       id: "contact",
